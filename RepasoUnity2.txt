@@ -1,0 +1,46 @@
+Geometría => VS => rasterizador (Hardware) => PS => monitor
+
+unity utiliza las semanticas de VsIn
+Hardware utiliza las semanticas con "VS_" 
+    "SV_TARGET" Indica que es salida para monitor
+
+Las normales son de las caras, la normal de los vertices es la media de las normales de las caras a las que pertenece
+
+VsOut vsMain(VsIn v){
+    VsOut o;
+    o.pos = TransformObjetToHCLip(v.vertex.xyz);
+    o.color = float4(abs(v.normal), 1.0);
+    return o;
+}
+
+float4 psMain(VsOut i) : SV_TARGET {
+    return i.color;
+}
+
+a ---- t ----b
+Formula de la interpolacion lineal: a*(1-t) +bt
+en el pixel shader no llegan las normales normalizadas 
+Si no interpolas hay que asignar el valor de la "interpolacion"
+HLSL: (nointerpolation float4 color : COLOR)
+
+
+Correccion de perspectiva
+La hace el rasterizador, simula la perspectiva entre dos vertives teniendo en cuenta que a nivel pantalla la posicion de dos vertices planos
+Se puede quitar con:
+HLSL: (noperspective float4 color : COLOR)
+
+Todos los vectores guardan un vector de 4 por debajo de cualquier otro
+Coordenadas homogeneas: v = v/2
+
+z-bufer: guarda los objetos segun la profundidad con respecto a la camara
+El hardware interpreta el buffer
+lo que esta en la misma z o por delante se pinta 
+z-test modifica la condicion de cuando se pinta (cuando se actualiza el z-buffer)
+El valor del z-buffer no es lineal, para consultarlo es una movida (hay una funcion de unity que lo linealiza) ocupando mas los primeros metros teniendo asi mas detalle
+Esto pasa por la forma de funcionar de un float, dando prioridad al 10% de entre 0-1, dando la vuelta se distribuye mas
+
+El Hardware no ejecuta el pixel shader si no se pasa el test de profundidad (z-test)
+Motores como unity hace un Z-prepas => pasada ejecutando Todos los vertex shaders para terminar de configurar el z-buffer
+
+stencil buffer: Guarda un numero entero de 8 bits, es menos preciso que el z-bufer, se pueden ejecutar test como con el z-buffer
+geometrias imposibles/renderizado segun indice
