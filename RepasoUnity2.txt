@@ -44,3 +44,6 @@ Motores como unity hace un Z-prepas => pasada ejecutando Todos los vertex shader
 
 stencil buffer: Guarda un numero entero de 8 bits, es menos preciso que el z-bufer, se pueden ejecutar test como con el z-buffer
 geometrias imposibles/renderizado segun indice
+
+Shader ps iluminación discreta:
+    ((in.pos2.z/i.pos2.w) *10) /10.0f

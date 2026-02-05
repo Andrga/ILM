@@ -27,7 +27,6 @@ Shader "Unlit/08Barras"
             struct VsOut {
                 float4 pos : SV_POSITION;
                 float4 posZBuf : TEXCOORD0; // con esta si se ve, distinta semantica
-                float4 color : COLOR;
             };
 
             VsOut vsMain ( VsIn v )
@@ -36,21 +35,18 @@ Shader "Unlit/08Barras"
                 o.pos = TransformObjectToHClip(v.vertex.xyz);
                 o.posZBuf = ComputeScreenPos(o.pos);
 
-                [branch]
-                if((_ScreenParams.x - o.posZBuf.x)%4 == 0){
-                    o.color = float4(1.0f, 1.0f, 0.0f, 1.0f);
-                }
-                else{
-                    o.color = float4(0.0f, 0.0f, 0.0f, 1.0f);
-                }
-
-               // o.color = Linear01DepthFromNear(o.posZBuf.z/o.posZBuf.w, _ScreenParams);
                 return o ;
             }
             
             float4 psMain (VsOut i) : SV_TARGET
             {
-                return i.color;
+                
+                if((int)(i.posZBuf.x/i.posZBuf.w * _ScreenParams.x) % 4 == 0){
+                    return float4(1.0f, 1.0f, 0.0f, 1.0f);
+                }
+                else{
+                    return float4(0.0f, 0.0f, 0.0f, 1.0f);
+                }
             }
 
             ENDHLSL 

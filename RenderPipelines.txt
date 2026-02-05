@@ -1,0 +1,5 @@
+Transparencia
+color = a * ps + b * rt
+a y b son elementos multiplicadores para conseguir diferentes transparencias
+
+
