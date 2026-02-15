@@ -1,0 +1,6 @@
+tipo de luz, la forma en la que un objeto en escena da luz (Ambiente, direccional, puntual, foco)
+
+Iluminación local: Cuando calculas el color del pixel solo tienes en cuenta el color y los rayos de manera directa
+Iluminación global: se tienen en cuenta las reflexiones de las luces
+
+Modelos de iluminación: la ecuacion de iluminación que define el comportamiento de la luz

@@ -1,7 +1,10 @@
-Shader "Unlit/05Ruido"
+Shader "Unlit/06Desaparicion"
 {
     Properties
-    {       
+    {
+        _MainTex ("Base (RGB)", 2D) = "" {}
+        _CutThresold("Cutoff thresold", float) = 0.0
+        _CutHeight("Cutoff height", float) = 0.0
         _NoiseScale("Noise Scale", float) = 20
     }
     SubShader
@@ -23,21 +26,7 @@ Shader "Unlit/05Ruido"
 
             # pragma vertex vsMain
             # pragma fragment psMain
-
-            struct VsIn {
-                float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
-            };
-            struct VsOut {
-                float4 pos : SV_POSITION;
-                float4 localPos : POSITION1;
-                float2 uv : TEXCOORD0;
-            };
-
-            CBUFFER_START(UnityPerMaterial)
-            float _NoiseScale;
-            CBUFFER_END
-
+            
             float2 unity_gradientNoise_dir(float2 p)
             {
                 p = p % 289;
@@ -64,21 +53,46 @@ Shader "Unlit/05Ruido"
                Out = unity_gradientNoise(UV * Scale) + 0.5; 
             }
 
+            struct VsIn {
+                float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
+            };
+            struct VsOut {
+                float4 pos : SV_POSITION;
+                float4 localPos : POSITION1;
+                float2 uv : TEXCOORD0;
+            };
+
+            CBUFFER_START(UnityPerMaterial)
+            sampler2D _MainTex;
+            float _CutThresold;
+            float _CutHeight;
+            float _NoiseScale;
+            CBUFFER_END
+
             VsOut vsMain ( VsIn v )
             {
                 VsOut o ;
                 o.pos = TransformObjectToHClip(v.vertex.xyz);
+                o.localPos = v.vertex;
                 o.uv = v.uv;
                 return o ;
             }
 
             float4 psMain (VsOut i) : SV_TARGET
             {
-                float color;
-                Unity_GradientNoise_float(i.uv, _NoiseScale, color);
-                return float4(color, color, color, 1);
+                float noise;
+                Unity_GradientNoise_float(i.uv, _NoiseScale, noise);
+                noise = (noise * 2) - 1;
+
+                i.localPos.y += noise * _CutHeight;
+
+                if( i.localPos.y > _CutThresold ) {
+                    discard;
+                }
+
+                return tex2D(_MainTex, i.uv);
             }
-          
 
             ENDHLSL 
         }
