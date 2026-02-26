@@ -84,8 +84,8 @@ MonoBehaviour:
     depthCompareFunction: 4
     enableWrite: 1
     stencilSettings:
-      overrideStencilState: 0
-      stencilReference: 1
+      overrideStencilState: 1
+      stencilReference: 2
       stencilCompareFunction: 3
       passOperation: 0
       failOperation: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    passTag: RenderObjects
+    passTag: 1
     Event: 300
     filterSettings:
       RenderQueueType: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
     depthCompareFunction: 4
     enableWrite: 1
     stencilSettings:
-      overrideStencilState: 0
+      overrideStencilState: 1
       stencilReference: 1
       stencilCompareFunction: 3
       passOperation: 0
