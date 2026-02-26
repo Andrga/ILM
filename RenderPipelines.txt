@@ -2,4 +2,13 @@ Transparencia
 color = a * ps + b * rt
 a y b son elementos multiplicadores para conseguir diferentes transparencias
 
+2 assets 
+    - el que configura el urp
+    - el que configura como va a renderizar nuestra camara
 
+El renderer es una propiedad de la cámara
+    - solo esta en el urp
+    - guarda una lista con renderers a elegir
+
+
+las render features son pasadas
