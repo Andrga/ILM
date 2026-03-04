@@ -11,9 +11,10 @@ Shader "Unlit/01Lunares"
         
         Pass
         {
-             HLSLPROGRAM
+            HLSLPROGRAM
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareOpaqueTexture.hlsl"
+
 
             #pragma vertex vsMain
             #pragma fragment psMain  
@@ -53,7 +54,7 @@ Shader "Unlit/01Lunares"
                 float centY = y *_Dist + _Dist/2;
 
                 float3 claro = SampleSceneColor(screenUV);
-                float3 oscuro = SampleSceneColor(screenUV)*0.5f;
+                float3 oscuro = _MaxDesplXr(screenUV)*0.5f;
 
                 if (distance(float2(centX, centY) , screenXY) < _Radio){
                     return float4(oscuro, 1);
