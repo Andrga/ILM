@@ -21,10 +21,13 @@ Shader "Unlit/03Contactos"
 			#pragma vertex vsMain
 			#pragma fragment psMain
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"
 
-			CBUFFER_START(UnityPerMaterial)
 			sampler2D _MainTex;
+			CBUFFER_START(UnityPerMaterial)
 			float4 _MainTex_ST;
+			float4 _ContactColor;
+			float _ContactSize;
 			CBUFFER_END
 
 			struct VsIn {
@@ -35,15 +38,42 @@ Shader "Unlit/03Contactos"
 			struct VsOut {
 				float4 pos : SV_POSITION;
 				float2 uv : TEXCOORD0;
+                float4 posSS : TEXCOORD1;
 			};
 
 			VsOut vsMain(VsIn v) {
 				VsOut o;
 				o.pos = TransformObjectToHClip(v.vertex.xyz);
+                o.posSS = ComputeScreenPos(o.pos);
 				o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 				return o;
 			}
 			float4 psMain(VsOut i) : COLOR {
+
+				//ESTA MAL!!
+    //             float2 screenUV = i.posSS.xy / i.posSS.w;
+
+    //             // Profundidad del objeto que ya está en el z-buffer (lo que hay detrás)
+				// // _CameraDepthTexture = la imagen en blanco y negro generada segun lo lejos que esta de la camara
+    //             float rawDepth = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, sampler_CameraDepthTexture, screenUV);
+
+    //             // Convertimos a distancia lineal desde la camara 
+				// //	https://docs.unity3d.com/Manual/SL-BuiltinFunctions.html		= doc LinearEyeDepth
+				// //	https://docs.unity3d.com/Manual/SL-UnityShaderVariables.html	= doc _ZBufferParams
+    //             float sceneDepth = LinearEyeDepth(rawDepth, _ZBufferParams);
+
+    //             // Profundidad lineal del fragmento actual
+    //             float fragDepth = i.posSS.w;
+    //             // Distancia entre este fragmento y la geometria de detras
+    //             float diff = sceneDepth - fragDepth;
+    //             // lo cerca que esta el pixel del contacto
+    //             float t = saturate(diff / _ContactSize); // saturate deja el valor entre 0 - 1
+
+    //             float4 texColor = tex2D(_MainTex, i.uv);
+
+    //             // Interpolamos: cerca del contacto -> _ContactColor, lejos -> textura
+    //             return lerp(_ContactColor, texColor, t);
+				
 				return tex2D(_MainTex, i.uv);
 			};
 
