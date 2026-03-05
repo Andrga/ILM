@@ -1,4 +1,4 @@
-Shader "Unlit/02Glitch"
+﻿Shader "Unlit/02Glitch"
 {
     Properties
     {
@@ -71,12 +71,13 @@ Shader "Unlit/02Glitch"
                 float2 screenUV = i.posSS / i.posSS.w;
                 float2 screenXY = screenUV * _ScreenParams.xy;
 
-                //float desp = unity_gradientNoise(float2(0, screenXY.y)) * _MaxDesplX;
-                float desp = unity_gradientNoise(float2(0, screenXY.y)) * (_Time.w - trunc(_Time.w));
-                desp += _MaxDesplX;
-                screenUV.x *= desp;
-                
-                return float4(SampleSceneColor(screenUV),1.0f);
+                // genera un desplazamiento en x, usando siempre la misma Y para toda una banda de  pixeles
+                float desp = unity_gradientNoise(float2(_Time.w - trunc(_Time.w), screenXY.y)) * _MaxDesplX;
+
+                // normaliza la posicion
+                screenUV.x += desp / _ScreenParams.x;
+
+                return float4(SampleSceneColor(screenUV), 1.0f);
             }
             ENDHLSL
         }
