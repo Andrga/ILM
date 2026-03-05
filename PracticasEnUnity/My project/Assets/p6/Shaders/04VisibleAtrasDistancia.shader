@@ -44,6 +44,9 @@ Shader "Custom/04VisibleAtrasDistancia"
 				return o;
 			}
 			float4 psMain(VsOut i) : COLOR {
+				// Configurar el pixel shader para que se pinte siempre
+				// si la distancia es positiva se pinta la textura,
+				// si es negativa se pinta un valor de un color con un alfa la distancia 0-1 para cuando este mas lejos se pinte transparente
 				return tex2D(_MainTex, i.uv);
 			};
 

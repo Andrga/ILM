@@ -49,23 +49,15 @@ Shader "Unlit/03Contactos"
 				return o;
 			}
 			float4 psMain(VsOut i) : COLOR {
-
+				// 
 				//ESTA MAL!!
     //             float2 screenUV = i.posSS.xy / i.posSS.w;
-
-    //             // Profundidad del objeto que ya está en el z-buffer (lo que hay detrás)
-				// // _CameraDepthTexture = la imagen en blanco y negro generada segun lo lejos que esta de la camara
-    //             float rawDepth = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, sampler_CameraDepthTexture, screenUV);
-
+	//				leer del zbuffer lo que habia antes y calcular la distancia con LinearEyeDepth
+	//				sacar la siguiente distancia usando la posicion i.pos y LinearEyeDepth.
+	//				Si la distancia  es menor que _ContactSize  pinta un lerpeo con el color, si no amarillo
     //             // Convertimos a distancia lineal desde la camara 
 				// //	https://docs.unity3d.com/Manual/SL-BuiltinFunctions.html		= doc LinearEyeDepth
 				// //	https://docs.unity3d.com/Manual/SL-UnityShaderVariables.html	= doc _ZBufferParams
-    //             float sceneDepth = LinearEyeDepth(rawDepth, _ZBufferParams);
-
-    //             // Profundidad lineal del fragmento actual
-    //             float fragDepth = i.posSS.w;
-    //             // Distancia entre este fragmento y la geometria de detras
-    //             float diff = sceneDepth - fragDepth;
     //             // lo cerca que esta el pixel del contacto
     //             float t = saturate(diff / _ContactSize); // saturate deja el valor entre 0 - 1
 
