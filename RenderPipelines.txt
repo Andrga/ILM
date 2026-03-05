@@ -10,5 +10,22 @@ El renderer es una propiedad de la cámara
     - solo esta en el urp
     - guarda una lista con renderers a elegir
 
+si desmarcamos el fetch color buffer no leemos del mundo el color de un pixel
 
 las render features son pasadas
+
+// es la textura final despues de renderizar para aplicar efectos de post-procesado
+-BlitTexture
+subshader{
+	Cull Off
+	ZWrite Off
+	ZTest Always //Noculling or Depth
+	pass{
+
+		SAMPLE_TEXTURE2D_X(_blitTexture)
+		vsout vsmain(v){
+			SAMPLE_TEXTURE2D_X(_blitTexture, sampler_Blit)
+
+		}
+	}	
+}
