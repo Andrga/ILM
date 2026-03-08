@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 565949602}
   - component: {fileID: 565949601}
   - component: {fileID: 565949600}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 468cdc43f6d97a0468ea1f4182dd3b91, type: 2}
+  - {fileID: 2100000, guid: d4a6853fc5044fc4b856debc365b87c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 882073251}
   - component: {fileID: 882073250}
   - component: {fileID: 882073249}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -714,7 +714,7 @@ GameObject:
   - component: {fileID: 1270210263}
   - component: {fileID: 1270210262}
   - component: {fileID: 1270210261}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,7 +765,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5a7b87a55ce282246a28b449e6706de9, type: 2}
+  - {fileID: 2100000, guid: d4a6853fc5044fc4b856debc365b87c0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
