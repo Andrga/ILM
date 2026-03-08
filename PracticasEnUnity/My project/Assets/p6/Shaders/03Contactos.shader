@@ -23,8 +23,8 @@ Shader "Unlit/03Contactos"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"
 
+			sampler2D _MainTex; 
 			CBUFFER_START(UnityPerMaterial)
-			sampler2D _MainTex;
 			float4 _MainTex_ST;
 			float4 _ContactColor;
 			float _ContactSize;
@@ -37,22 +37,25 @@ Shader "Unlit/03Contactos"
 
 			struct VsOut {
 				float4 pos : SV_POSITION;
-				float2 uv : TEXCOORD0;
+                float4 posSS : TEXCOORD0;
+				float2 uv : TEXCOORD1;
 			};
 
 			VsOut vsMain(VsIn v) {
 				VsOut o;
 				o.pos = TransformObjectToHClip(v.vertex.xyz);
+                o.posSS = ComputeScreenPos(o.pos);
 				o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);
 				return o;
 			}
-			float4 psMain(VsOut i) : COLOR {
+			float4 psMain(VsOut i) : COLOR {				
+                float2 screenUV = i.posSS / i.posSS.w;
 				// el PS lee del zbuffer la info del objeto en primer plano.
-				float3 depth = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, sampler_CameraDepthTexture, i.uv);
+				float distance = LinearEyeDepth(SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, sampler_CameraDepthTexture, screenUV), _ZBufferParams);
 
 				// obtiene la distancia desde la cámara a ese punto.
-				float distance = LinearEyeDepth(depth, _ZBufferParams);
-				float distance2 = LinearEyeDepth(i.pos, _ZBufferParams);
+				//float distance = LinearEyeDepth(depth, _ZBufferParams);
+				float distance2 = i.pos.z;
 
 				// con lo anterior calcula la distancia entre el punto que se quiere pintar y el que ya hay.
 				float diff = distance - distance2;
