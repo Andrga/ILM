@@ -29,7 +29,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ContactSize: 4.2
+    - _ContactSize: 3.7
     m_Colors:
     - _ContactColor: {r: 1, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []
