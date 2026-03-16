@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_03Glitch
-  m_Shader: {fileID: 4800000, guid: 58babd9d02d3549459c9821e6588ac70, type: 3}
+  m_Name: 04Pixelate
+  m_Shader: {fileID: 4800000, guid: 7615b47b8bdea57468e0abffec96379d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -25,7 +25,8 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _MaxDesplX: 37
+    - _MaxDesplX: 10
+    - _PixelSize: 16
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

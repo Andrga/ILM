@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_01MarcaAgua
+  m_Name: 01MarcaAgua
   m_Shader: {fileID: 4800000, guid: 07369cfb81ea26143a9d078c3de8f384, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
