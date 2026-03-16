@@ -1,0 +1,113 @@
+[8 etapas prefijadas del urp]
+- Shadows
+- PrePasses
+- GBuffer
+- DefferredLights
+- Opaques
+- Skybox
+----------------------- aqui unity copia el render en una textura de opacos
+- Transparents
+- PostProcessing
+
+Entre etapas unity puede hacer cosas.
+
+las render features no son pasadas, no se pintan en el orden que las creamos, y no son ScripteableRenderPass
+
+un ScripteableRenderPass es una pasada / inyector de nodos en el rendergraph como minimo 1 nodo pero puede añadir mas.
+una RenderFeature es un inyector de uno o mas ScripteableRenderPass.
+
+Render graph viewer es una matriz de lo que hace cada etapa con los recursos
+el iconito del globo terraqueo indica que es global
+
+Blit => transferencia de bits, copia de una textura a otra textura, verbatin (?) (byte a byte) o a traves de materiales
+
+Scripteando un ScripteableRenderFeature:
+Se llama a Create() cada vez que se añade al render graph y cuando cambiemos un parametro de la render feature (porque se destruye y se vuelve a crear)
+Se llama a AddRenderPasses() Se llama cada frame
+CopyPass = es una pasada de copia! :-]
+
+[SerializeField] 
+
+CreateColorTexturePass m_pass;
+
+Create(){
+    copyPass = new CopyPass();
+    copyPass.renderPassEvent = RenderPAssEvent // cuando queremos que se inyecte
+}
+
+AddRenderPasses(ScripteableRenderPass){
+    m_pass.Setup(m_colorRelleno);
+    Render.EnquePass(m_pass);
+}
+
+
+-> ScripteableRenderPass:
+RecordRenderGraph(){
+    // ------------------------- PASADA DE COPIA -----------------------------
+    // hacemos los recursos
+    // UniversalResourceData es un cajon desastre de recursos
+    UniversalResourceData resourceData = 
+                frameData.Get<UniversalResourceData>()
+
+    // cogemos la textura actual
+    var source = resourceData.activeColorTexture;
+
+    // creamos la textura destination textura/target/destino nueva
+    // cogemos informacion de la textura source
+    var destionationDesc = renderGraph.GetTextureDesc(source);
+    destionationDesc.name = $"Pepito.{passName}";
+
+    TextureHandle destination = renderGraph.CreateTexture(destionationDesc);
+
+
+    //creacion de un nodo
+    renderGraph.AddCopyPass(source, destination, passName);
+
+
+    // ------------------------------- OTRA PASADA --------------------------------
+    // cuando le pasas passData a AddRasterRenderPass, internamente hace algo como:
+    /*
+     PassData data = new PassData();
+        passData.color = _color;
+        builder.setRendererParams(data);
+    */
+    using (var builder = renderGraph.AddRasterRenderPass<PassData>("Crear textura", passData)) // añade una renderpass extra (nombre, PassData)
+    {
+
+        // UniversalResourceData es un cajon desastre de recursos
+        UniversalResourceData resourceData = 
+                frameData.Get<UniversalResourceData>()
+
+        // cogemos la textura actual
+        var source = resourceData.activeColorTexture;
+
+        // creamos la textura destination textura/target/destino nueva
+        // cogemos informacion de la textura source
+        var destionationDesc = renderGraph.GetTextureDesc(source);
+        destionationDesc.name = $"OtroPepito.{passName}";
+        TextureHandle destination = renderGraph.CreateTexture(destionationDesc);
+
+        // Asigna la textura objetivo
+        builder.setRenderAttachment(destination, 0);
+        // Manera compacta de pasar la funcion que ejecuta el pass.
+        builder.SetRenderFunc<PAssData>(ExecutePass);
+        // Unity quita las pasadas que no se usan las texturas, con esta funcion se fuerza a usarlas y que aparezcan en el frame debugger.
+        builder.AllowPassCulling(false);
+    }
+}
+
+
+// como es estatico hay que pasarle por parametro todo
+// los parametros son distintos dependiendo de lo que necesitemos, por eso usamos una clase PassData con los atributos necesarios
+class PassData
+{
+    Color color;
+}
+static void ExecutePass(PassData data, RasterGraphContext context)
+{
+    context.cmd.ClearRenderTarget(true, true, data.color);
+}
+
+en el frame debugger no se ve el nombre de la textura que hemos asignado, pero en el renderGraphViewer si se ve
+
+// ------------------------- COPY PASS A MANO --------------------------
