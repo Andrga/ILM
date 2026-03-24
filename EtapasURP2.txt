@@ -1,0 +1,155 @@
+métodos de extension -> cosa de c# para expandir métodos
+
+// ============== [pintado de mallas] ================
+// render feature:
+class DrawMeshRenderFeature : {
+    [SerializeField] private Material material;
+    [SerializeField] private Mesh mesh;
+    [SerializeField] private string m_ShaderPass;
+
+    DrawMeshPass m_pass;
+
+    public override void Create(){
+        m_pass = new DrawMeshPass();
+        m_pass.rendererPassEvent = RenderPassEvent.AfterRenderingPostProcessing;
+    }
+
+    public override void AddRendererPass(){
+        if (renderingData.cameraData.cameraType != cameraType.Game)
+
+    }
+
+}
+
+// DrawMeshPass:
+class DreawMeshPass : {
+    private Material material;
+    private Mesh mesh;
+    private string m_ShaderPass;
+    private int passId;
+
+    class PassData
+    {
+        public Material material;
+        public Mesh mesh;
+        public int passId;
+    }
+
+    public void Setup(Material mat, Mesh _mesh, String ShaderPassName){
+        material = mat;
+        mesh = _mesh;
+        this.passId  = -1;
+        // hay que buscar el numero de pasada dentro de las pasadas que tenga el material
+        if ((material != null) && (ShaderPassName.Length >0)){
+            for(int i = 0; i< mat.passCount; ++i)
+                if (mat.GetPassName(i) == ShaderPassName)
+                {
+                    this.passId = i;
+                    break;
+                }
+        }
+    }
+
+    public override void RecordRenderGraph(renderGraph renderGraph, ContextContainer frameData){
+        using (var builder = renderGraph.AddRasterRenderPass<PassData>("Crear textura", passData)) // añade una renderpass extra (nombre, PassData)
+        {
+            passData.material = material;
+            passData.mesh = mesh;
+            UniversalResourceData resourceData = frameData.Get<UniversalResourceData>();    
+
+            // destino
+            var destination = resourceData.activeColorTexture;
+            builder.setRenderAttachment(destination, 0);
+
+            builder.SetRenderFunc<PassData>(ExecutePass);
+        }
+    }
+
+    static void ExecutePass(PassData data, RasterGraphContext context){
+        var cmd = context.cmd;
+        if(data.passId >= 0)
+            // Para indicar que pasada queremo que se ejecute hay que indicarlo con un id
+            cmd.drawMesh(data.mesh, Matrix4x4.identity, data.material, data.passId);
+        else
+            // Esto se supone que esta usando las pasadas del material de unity
+            cmd.drawMesh(data.mesh, Matrix4x4.identity, data.material);
+    }
+
+}
+
+// ============== [textura between renderPasses] ================
+// render feature:
+class TextureBetweenRenderPassesFeature : {
+    [SerializeField] private Material material;
+    [SerializeField] private Mesh mesh;
+    [SerializeField] private string m_ShaderPass;
+
+    DrawMeshPass m_pass;
+
+    public override void Create(){
+        m_pass = new DrawMeshPass();
+        m_pass.rendererPassEvent = RenderPassEvent.AfterRenderingPostProcessing;
+    }
+
+    public override void AddRendererPass(){
+        if (renderingData.cameraData.cameraType != cameraType.Game)
+
+    }
+
+}
+
+// DrawMeshPass:
+class DreawMeshPass : {
+    private Material material;
+    private Mesh mesh;
+    private string m_ShaderPass;
+    private int passId;
+
+    class PassData
+    {
+        public Material material;
+        public Mesh mesh;
+        public int passId;
+    }
+
+    public void Setup(Material mat, Mesh _mesh, String ShaderPassName){
+        material = mat;
+        mesh = _mesh;
+        this.passId  = -1;
+        // hay que buscar el numero de pasada dentro de las pasadas que tenga el material
+        if ((material != null) && (ShaderPassName.Length >0)){
+            for(int i = 0; i< mat.passCount; ++i)
+                if (mat.GetPassName(i) == ShaderPassName)
+                {
+                    this.passId = i;
+                    break;
+                }
+        }
+    }
+
+    public override void RecordRenderGraph(renderGraph renderGraph, ContextContainer frameData){
+        using (var builder = renderGraph.AddRasterRenderPass<PassData>("Crear textura", passData)) // añade una renderpass extra (nombre, PassData)
+        {
+            passData.material = material;
+            passData.mesh = mesh;
+            UniversalResourceData resourceData = frameData.Get<UniversalResourceData>();    
+
+            // destino
+            var destination = resourceData.activeColorTexture;
+            builder.setRenderAttachment(destination, 0);
+
+            builder.SetRenderFunc<PassData>(ExecutePass);
+        }
+    }
+
+    static void ExecutePass(PassData data, RasterGraphContext context){
+        var cmd = context.cmd;
+        if(data.passId >= 0)
+            // Para indicar que pasada queremo que se ejecute hay que indicarlo con un id
+            cmd.drawMesh(data.mesh, Matrix4x4.identity, data.material, data.passId);
+        else
+            // Esto se supone que esta usando las pasadas del material de unity
+            cmd.drawMesh(data.mesh, Matrix4x4.identity, data.material);
+    }
+
+}
