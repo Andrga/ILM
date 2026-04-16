@@ -1,0 +1,18 @@
+The ray Tracer Challenge (Jamis Buck) -> guia para el trazado de 
+
+Hagamos un trazador de rayos !! ☻
+
+Trazador de rayos lanza rayos desde la camara con distancia infinita y una salida (film) (.ppn {resh, resv, int 256, colores...})
+
+Necesitamos un rayo:
+https://raytracing.github.io/books/RayTracingInOneWeekend.html#rays,asimplecamera,andbackground/therayclass
+punto de origen y direccion unitaria(idealmente)
+
+Necesitamos una camara:
+Lanzará los rayos a cada centro de pixel para calcular el colore
+distancia de plano cercano ~= distancia focal
+Recibimos:
+ - posicion/direccion/UP
+ - apertura focal (Angulo de apertura de la camara) se calcula segun el plano renderizado a distancia 1
+ - film
+La camara va a funcionar como un lanzador de rayos, le pedimos lanzar y devuelve la informacion.
