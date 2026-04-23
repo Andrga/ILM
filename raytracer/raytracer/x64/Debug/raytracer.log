@@ -1,2 +1,25 @@
 ﻿  main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,82): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,82): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,82): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,82): warning C4244:             _Ty=double
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,82): warning C4244:         ]
+  (compiling source file '../src/main.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\xutility(476,82):
+      the template instantiation context (the oldest one first) is
+          C:\Users\andres\Documents\GitHub\ILM\raytracer\src\main.cpp(28,8):
+          see reference to function template instantiation 'std::shared_ptr<Sphere> std::make_shared<Sphere,glm::vec3,double,std::shared_ptr<Material>&>(glm::vec3 &&,double &&,std::shared_ptr<Material> &)' being compiled
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(2913,46):
+          see reference to function template instantiation 'std::_Ref_count_obj2<Sphere>::_Ref_count_obj2<_Ty,double,std::shared_ptr<Material>&>(_Ty &&,double &&,std::shared_ptr<Material> &)' being compiled
+          with
+          [
+              _Ty=glm::vec3
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\memory(2100,18):
+          see reference to function template instantiation 'void std::_Construct_in_place<_Ty,glm::vec<3,float,glm::packed_highp>,double,std::shared_ptr<Material>&>(_Ty &,glm::vec<3,float,glm::packed_highp> &&,double &&,std::shared_ptr<Material> &) noexcept(false)' being compiled
+          with
+          [
+              _Ty=Sphere
+          ]
+  
   raytracer.vcxproj -> C:\Users\andres\Documents\GitHub\ILM\raytracer\x64\Debug\raytracer.exe

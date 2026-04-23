@@ -1,7 +1,9 @@
 C:\Users\andres\Documents\GitHub\ILM\raytracer\src\Camera.cpp;C:\Users\andres\Documents\GitHub\ILM\raytracer\raytracer\x64\Debug\Camera.obj
 C:\Users\andres\Documents\GitHub\ILM\raytracer\src\Film.cpp;C:\Users\andres\Documents\GitHub\ILM\raytracer\raytracer\x64\Debug\Film.obj
 C:\Users\andres\Documents\GitHub\ILM\raytracer\src\main.cpp;C:\Users\andres\Documents\GitHub\ILM\raytracer\raytracer\x64\Debug\main.obj
+C:\Users\andres\Documents\GitHub\ILM\raytracer\src\Material.cpp;C:\Users\andres\Documents\GitHub\ILM\raytracer\raytracer\x64\Debug\Material.obj
 C:\Users\andres\Documents\GitHub\ILM\raytracer\src\Renderer.cpp;C:\Users\andres\Documents\GitHub\ILM\raytracer\raytracer\x64\Debug\Renderer.obj
+C:\Users\andres\Documents\GitHub\ILM\raytracer\src\Scene.cpp;C:\Users\andres\Documents\GitHub\ILM\raytracer\raytracer\x64\Debug\Scene.obj
 C:\Users\andres\Documents\GitHub\ILM\raytracer\src\Shape.cpp;C:\Users\andres\Documents\GitHub\ILM\raytracer\raytracer\x64\Debug\Shape.obj
+C:\Users\andres\Documents\GitHub\ILM\raytracer\src\ShapeIntersection.cpp;C:\Users\andres\Documents\GitHub\ILM\raytracer\raytracer\x64\Debug\ShapeIntersection.obj
 C:\Users\andres\Documents\GitHub\ILM\raytracer\src\Sphere.cpp;C:\Users\andres\Documents\GitHub\ILM\raytracer\raytracer\x64\Debug\Sphere.obj
-C:\Users\andres\Documents\GitHub\ILM\raytracer\raytracer\Material.cpp;C:\Users\andres\Documents\GitHub\ILM\raytracer\raytracer\x64\Debug\Material.obj

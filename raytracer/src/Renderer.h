@@ -6,22 +6,22 @@
 #include "Shape.h"
 
 class Renderer {
-public: 
-	Renderer(Film* film, Camera* camera, const std::vector<Shape*>& shapes);
+public:
+	Renderer(Film* film, Camera* camera, Shape* shape);
 
 	// que genera la escena
 	void Render();
 
 	// que devuelve el color del rayo lanzado sobre la geometria.
-	Color ray_color(const Ray& r);
+	Color ray_color(const Ray& r)const;
 
 	Film* getFilm() const { return _film; }
 	Camera* getCamera() const { return _camera; }
-	const std::vector<Shape*>& getShapesVector() const { return _shapes; }
+	Shape* getShape() const { return _shape; }
 
 private:
 	Film* _film;
 	Camera* _camera;
-	std::vector<Shape*> _shapes;
+	Shape* _shape;
 };
 

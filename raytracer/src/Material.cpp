@@ -1,4 +1,4 @@
 #include "Material.h"
 
-Material::Material(Color* baseColor) : _baseColor(baseColor){
+Material::Material(Color const& baseColor) : _baseColor(baseColor){
 }

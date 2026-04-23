@@ -7,7 +7,7 @@
 #include "glm/trigonometric.hpp"
 class Sphere : public Shape {
 public:
-	Sphere(glm::vec3 center, float radius, Material* mat);
+	Sphere(glm::vec3 center, float radius, std::shared_ptr<Material> mat);
 
 	glm::vec3 getCenter() const { return _center; }
 	float getRadius() const { return _radius; }
@@ -16,6 +16,7 @@ public:
 	void setRadius(float r) { _radius = r; }
 
 	bool Intersect(const Ray& ray, float tMin, float tMax) const override;
+	bool Intersect(const Ray& ray, float tMin, float tMax, ShapeIntersection& shapeIntersection) const override;
 
 private: 
 	glm::vec3 _center;

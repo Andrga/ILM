@@ -24,7 +24,9 @@
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\Material.cpp" />
     <ClCompile Include="..\src\Renderer.cpp" />
+    <ClCompile Include="..\src\Scene.cpp" />
     <ClCompile Include="..\src\Shape.cpp" />
+    <ClCompile Include="..\src\ShapeIntersection.cpp" />
     <ClCompile Include="..\src\Sphere.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -34,7 +36,9 @@
     <ClInclude Include="..\src\Material.h" />
     <ClInclude Include="..\src\Ray.hpp" />
     <ClInclude Include="..\src\Renderer.h" />
+    <ClInclude Include="..\src\Scene.h" />
     <ClInclude Include="..\src\Shape.h" />
+    <ClInclude Include="..\src\ShapeIntersection.h" />
     <ClInclude Include="..\src\Sphere.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

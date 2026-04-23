@@ -3,10 +3,10 @@
 #include "glm/trigonometric.hpp"
 
 Camera::Camera(
+    const Film &film,
     glm::vec3 position,
     glm::vec3 look,
     glm::vec3 up,
-    const Film &film,
     const float fov_degrees_vertical
 ) : position(position) {
     const float fov_radians_vertical = glm::radians(fov_degrees_vertical * 0.5);

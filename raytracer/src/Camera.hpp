@@ -8,10 +8,10 @@
 struct Camera {
 
     Camera(
+        const Film &film,
         glm::vec3 position,
         glm::vec3 look,
         glm::vec3 up,
-        const Film &film,
         const float fov_degrees_vertical
     );
 
