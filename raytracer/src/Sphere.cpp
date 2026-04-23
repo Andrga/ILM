@@ -24,7 +24,8 @@ bool Sphere::Intersect(const Ray& ray, float tMin, float tMax, ShapeIntersection
 	{
 		float t = (-b - std::sqrt(discriminant)) / (2.0 * a);
 		if (t > tMin && t < tMax) {
-			shapeIntersection = ShapeIntersection(_material, (ray.origin() + t) * ray.direction());
+			glm::vec3 p = (ray.origin() + t) * glm::normalize(ray.direction());
+			shapeIntersection = ShapeIntersection(_material, p, glm::normalize(p - _center));
 			return true;
 		}
 	}

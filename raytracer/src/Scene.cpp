@@ -6,7 +6,7 @@ Scene::Scene() : _shapes()
 {
 }
 
-void Scene::add(std::shared_ptr<Shape> const& shape)
+void Scene::addShape(std::shared_ptr<Shape> const& shape)
 {
 	if (shape)
 		_shapes.push_back(shape);

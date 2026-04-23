@@ -1,7 +1,7 @@
 #include "Renderer.h"
 
-Renderer::Renderer(Film* film, Camera* camera, Shape* shape)
-	: _film(film), _camera(camera), _shape(shape) {
+Renderer::Renderer(Film* film, Camera* camera, World* world)
+	: _film(film), _camera(camera), _world(world) {
 }
 
 void Renderer::Render() {
@@ -16,10 +16,23 @@ void Renderer::Render() {
 
 Color Renderer::ray_color(const Ray& r) const {
 	ShapeIntersection intersection;
-	if (_shape->Intersect(r, 0, 10000, intersection))
-		return intersection.getMaterial()->getBaseColor();
+	if (_world->getShapeScene()->Intersect(r, 0, 50, intersection)) {
+		return shade(r, intersection);
+	}
 
-	glm::vec3 unit_direction = glm::normalize(r.direction());
+	return BLACK;
+
+	/*glm::vec3 unit_direction = glm::normalize(r.direction());
 	float a = 0.5 * (unit_direction.y + 1.0);
-	return (1.0f - a) * Color(1.0, 1.0, 1.0) + a * Color(0.5, 0.7, 1.0);
+	return (1.0f - a) * Color(1.0, 1.0, 1.0) + a * Color(0.5, 0.7, 1.0);*/
+}
+
+Color Renderer::shade(Ray r, ShapeIntersection hit) const {
+	Color ret(BLACK);
+	// Ambiente
+	ret += Color(0.1, 0.1, 0.1); // Luz de ambiente , cableada
+	// luces
+	for (std::shared_ptr<Light> l : _world->getLightVector())
+		ret += l->shade(r, hit);
+	return ret;
 }
