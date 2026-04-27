@@ -32,7 +32,17 @@ Color Renderer::shade(Ray r, ShapeIntersection hit) const {
 	// Ambiente
 	ret += Color(0.1, 0.1, 0.1); // Luz de ambiente , cableada
 	// luces
-	for (std::shared_ptr<Light> l : _world->getLightVector())
-		ret += l->shade(r, hit);
+	for (std::shared_ptr<Light> l : _world->getLightVector()) {
+		if (l->projectShadows()) {
+			Ray shadowRay(hit.getPoint(), l->shadowDir(hit.getPoint()));
+			ShapeIntersection si;
+			if (_world->getShapeScene()->Intersect(shadowRay, 0, 50, si))
+			{
+				continue;
+			}
+			ret += l->shade(r, hit);
+		}
+	}
+
 	return ret;
 }

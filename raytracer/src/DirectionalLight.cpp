@@ -3,20 +3,26 @@
 #include <cmath>
 #include <glm/geometric.hpp>
 
-DirectionalLight::DirectionalLight(const glm::vec3& dir, const Color& color) : _direction(dir), _color(color) {
+DirectionalLight::DirectionalLight(const glm::vec3& dir, const Color& color, float glossPower, bool projectShadows)
+	: Light(color, glossPower, projectShadows), _direction(glm::normalize(dir)) {
 }
-
 Color DirectionalLight::shade(Ray r, ShapeIntersection hit) {
 	// Diffuse
 	float intensity = std::max(0.0f, glm::dot(hit.getNormal(), _direction));
 	glm::vec3 diffuse = _color * intensity;
 	// Especular
-	glm::vec3 view = glm::normalize(- r.direction());
-	glm::vec3 radius = 2 * glm::dot(hit.getNormal(), _direction) * hit.getNormal() - _direction;
+	glm::vec3 viewDir = glm::normalize(-r.direction());
+	glm::vec3 lightDir = glm::normalize(_direction);
+	glm::vec3 halfVector = glm::normalize(lightDir + viewDir);
 
-	float specular = std::max(0.0f, glm::dot(view, radius));
-	specular = std::pow(specular, _glossPower);
-	glm::vec3 specularColor = _color * specular;
+	float specularIntensity = std::max(0.0f, glm::dot(hit.getNormal(), halfVector));
+	specularIntensity = std::pow(specularIntensity, _glossPower);
+	glm::vec3 specular = _color * specularIntensity;
 
-	return Color(hit.getMaterial()->getBaseColor() * diffuse + specularColor);
+	return Color(hit.getMaterial()->getBaseColor() * diffuse + specular);
+}
+
+glm::vec3 DirectionalLight::shadowDir(glm::vec3 point)
+{
+	return _direction;
 }

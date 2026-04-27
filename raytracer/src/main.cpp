@@ -11,10 +11,11 @@
 #include "Scene.h"
 #include "Sphere.h"
 #include "DirectionalLight.h"
+#include "PointLight.h"
 
 int main(void) {
 	std::ofstream outFile("imagen.ppm");
-	Film film(800, 600, outFile);
+	Film film(1920, 1080, outFile);
 
 	Camera camera( film,
 		glm::vec3(0, 0, 3),
@@ -40,8 +41,10 @@ int main(void) {
 	scene.addShape(obj1); scene.addShape(obj2); scene.addShape(obj3); scene.addShape(suelo);
 
 	World world(&scene);
-	std::shared_ptr<DirectionalLight> dirLight = std::make_shared<DirectionalLight>(glm::vec3(1, 1, 0), WHITE);
-	world.addLight(dirLight); // aniadir TODO luz direccional
+	std::shared_ptr<PointLight> pintLight1 = std::make_shared<PointLight>(glm::vec3(2, 2, 0), WHITE);
+	world.addLight(pintLight1);
+	std::shared_ptr<PointLight> pintLight2 = std::make_shared<PointLight>(glm::vec3(-2, 2, -3), WHITE);
+	world.addLight(pintLight2);
 
 	Renderer renderer(&film, &camera, &world);
 	renderer.Render();
