@@ -1,2 +1,6 @@
-﻿  DirectionalLight.cpp
-  raytracer.vcxproj -> U:\hlocal\ILM\raytracer\x64\Debug\raytracer.exe
+﻿  Sphere.cpp
+C:\Users\andres\Documents\GitHub\ILM\raytracer\src\ShapeIntersection.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file '../src/Sphere.cpp')
+  
+C:\Users\andres\Documents\GitHub\ILM\raytracer\src\Sphere.cpp(25,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  raytracer.vcxproj -> C:\Users\andres\Documents\GitHub\ILM\raytracer\x64\Debug\raytracer.exe
