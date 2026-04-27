@@ -10,6 +10,6 @@ public:
 private: 
 	glm::vec3 _direction;
 	Color _color;
-	float _glossPower = 1.0f;
+	float _glossPower = 100.0f;
 };
 

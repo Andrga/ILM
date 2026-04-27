@@ -1,105 +1,108 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "U:\\hlocal\\ILM\\raytracer\\",
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\DirectionalLight.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\DirectionalLight.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\DirectionalLight.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\Renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\Sphere.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Sphere.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\ShapeIntersection.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\ShapeIntersection.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\World.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\World.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\DirectionalLight.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\DirectionalLight.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\DirectionalLight.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\raytracer\\World.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:raytracer\\World.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\World.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\World.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\TOOLS\\MSVC\\14.39.33519\\INCLUDE\\CMATH||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\HLOCAL\\ILM\\RAYTRACER\\SRC\\GLM\\GEOMETRIC.HPP||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:SRC\\GLM\\GEOMETRIC.HPP||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\Light.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Light.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Light.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\Material.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Material.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\camera.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\camera.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\Film.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Film.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\Sphere.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Sphere.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\Light.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Light.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Light.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\ShapeIntersection.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\ShapeIntersection.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\ShapeIntersection.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\ShapeIntersection.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\ShapeIntersection.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\Color.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\raytracer\\World.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:raytracer\\World.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Sphere.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Sphere.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Material.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Material.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\camera.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\camera.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Film.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Film.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Sphere.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Sphere.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Color.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Color.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\Shape.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Shape.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Shape.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\Film.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Film.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Film.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|U:\\hlocal\\ILM\\raytracer\\src\\Material.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Material.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{FDFBB9C7-9703-45DB-B907-3E4C653DA9C9}|raytracer\\raytracer.vcxproj|solutionrelative:src\\Material.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include\\memory||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\glm\\geometric.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\glm\\geometric.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -113,31 +116,40 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "World.h",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\World.h",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\World.h",
               "RelativeDocumentMoniker": "src\\World.h",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\World.h",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\World.h",
               "RelativeToolTip": "src\\World.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAOAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-23T12:27:22.367Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "cmath",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\cmath",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\cmath",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\cmath",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\cmath",
+              "ViewState": "AQIAACUCAAAAAAAAAAAAADkCAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-04-26T14:12:43.824Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "DirectionalLight.h",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\DirectionalLight.h",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\DirectionalLight.h",
               "RelativeDocumentMoniker": "src\\DirectionalLight.h",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\DirectionalLight.h",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\DirectionalLight.h",
               "RelativeToolTip": "src\\DirectionalLight.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-23T13:38:42.471Z",
               "EditorCaption": ""
@@ -146,219 +158,210 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "DirectionalLight.cpp",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\DirectionalLight.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\DirectionalLight.cpp",
               "RelativeDocumentMoniker": "src\\DirectionalLight.cpp",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\DirectionalLight.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\DirectionalLight.cpp",
               "RelativeToolTip": "src\\DirectionalLight.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA7AAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-23T13:25:59.99Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "World.cpp",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\raytracer\\World.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\raytracer\\World.cpp",
               "RelativeDocumentMoniker": "raytracer\\World.cpp",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\raytracer\\World.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\raytracer\\World.cpp",
               "RelativeToolTip": "raytracer\\World.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-23T12:51:22.314Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 5,
               "Title": "Light.h",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Light.h",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Light.h",
               "RelativeDocumentMoniker": "src\\Light.h",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Light.h",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Light.h",
               "RelativeToolTip": "src\\Light.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-23T12:24:01.486Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "Material.h",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Material.h",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Material.h",
               "RelativeDocumentMoniker": "src\\Material.h",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Material.h",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Material.h",
               "RelativeToolTip": "src\\Material.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-21T13:21:56.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T13:21:56.255Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Renderer.cpp",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Renderer.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Renderer.cpp",
               "RelativeDocumentMoniker": "src\\Renderer.cpp",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Renderer.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Renderer.cpp",
               "RelativeToolTip": "src\\Renderer.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACAAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-21T13:06:28.233Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "Renderer.h",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Renderer.h",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Renderer.h",
               "RelativeDocumentMoniker": "src\\Renderer.h",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Renderer.h",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Renderer.h",
               "RelativeToolTip": "src\\Renderer.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-21T12:58:07.115Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "Sphere.cpp",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Sphere.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Sphere.cpp",
               "RelativeDocumentMoniker": "src\\Sphere.cpp",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Sphere.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Sphere.cpp",
               "RelativeToolTip": "src\\Sphere.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-21T12:52:06.859Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T12:52:06.859Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "Scene.h",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Scene.h",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Scene.h",
               "RelativeDocumentMoniker": "src\\Scene.h",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Scene.h",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Scene.h",
               "RelativeToolTip": "src\\Scene.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-23T08:04:15.452Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-23T08:04:15.452Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "main.cpp",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\main.cpp",
               "RelativeDocumentMoniker": "src\\main.cpp",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\main.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\main.cpp",
               "RelativeToolTip": "src\\main.cpp",
               "ViewState": "AgIAABUAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-21T12:09:49.389Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T12:09:49.389Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ShapeIntersection.h",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\ShapeIntersection.h",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\ShapeIntersection.h",
               "RelativeDocumentMoniker": "src\\ShapeIntersection.h",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\ShapeIntersection.h",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\ShapeIntersection.h",
               "RelativeToolTip": "src\\ShapeIntersection.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-23T07:40:34.271Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "Scene.cpp",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Scene.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Scene.cpp",
               "RelativeDocumentMoniker": "src\\Scene.cpp",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Scene.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Scene.cpp",
               "RelativeToolTip": "src\\Scene.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-23T08:08:26.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-23T08:08:26.277Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 25,
               "Title": "geometric.hpp",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\glm\\geometric.hpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\glm\\geometric.hpp",
               "RelativeDocumentMoniker": "src\\glm\\geometric.hpp",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\glm\\geometric.hpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\glm\\geometric.hpp",
               "RelativeToolTip": "src\\glm\\geometric.hpp",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-23T13:09:02.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Camera.hpp",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Camera.hpp",
-              "RelativeDocumentMoniker": "src\\Camera.hpp",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Camera.hpp",
-              "RelativeToolTip": "src\\Camera.hpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-21T12:31:17.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Film.h",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Film.h",
-              "RelativeDocumentMoniker": "src\\Film.h",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Film.h",
-              "RelativeToolTip": "src\\Film.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-23T09:06:35.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-23T13:09:02.68Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "Sphere.h",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Sphere.h",
-              "RelativeDocumentMoniker": "src\\Sphere.h",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Sphere.h",
-              "RelativeToolTip": "src\\Sphere.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Title": "Camera.hpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Camera.hpp",
+              "RelativeDocumentMoniker": "src\\Camera.hpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Camera.hpp",
+              "RelativeToolTip": "src\\Camera.hpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-21T12:51:51.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T12:31:17.989Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
+              "Title": "Film.h",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Film.h",
+              "RelativeDocumentMoniker": "src\\Film.h",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Film.h",
+              "RelativeToolTip": "src\\Film.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-04-23T09:06:35.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Sphere.h",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Sphere.h",
+              "RelativeDocumentMoniker": "src\\Sphere.h",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Sphere.h",
+              "RelativeToolTip": "src\\Sphere.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-04-21T12:51:51.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Light.cpp",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Light.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Light.cpp",
               "RelativeDocumentMoniker": "src\\Light.cpp",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Light.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Light.cpp",
               "RelativeToolTip": "src\\Light.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-23T12:37:11.647Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 8,
               "Title": "ShapeIntersection.cpp",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\ShapeIntersection.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\ShapeIntersection.cpp",
               "RelativeDocumentMoniker": "src\\ShapeIntersection.cpp",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\ShapeIntersection.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\ShapeIntersection.cpp",
               "RelativeToolTip": "src\\ShapeIntersection.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-23T12:32:18.578Z",
               "EditorCaption": ""
@@ -367,61 +370,57 @@
               "$type": "Document",
               "DocumentIndex": 21,
               "Title": "Film.cpp",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Film.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Film.cpp",
               "RelativeDocumentMoniker": "src\\Film.cpp",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Film.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Film.cpp",
               "RelativeToolTip": "src\\Film.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-21T12:31:14.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T12:31:14.197Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "Shape.h",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Shape.h",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Shape.h",
               "RelativeDocumentMoniker": "src\\Shape.h",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Shape.h",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Shape.h",
               "RelativeToolTip": "src\\Shape.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-21T12:51:04.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T12:51:04.705Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "Camera.cpp",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Camera.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Camera.cpp",
               "RelativeDocumentMoniker": "src\\Camera.cpp",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Camera.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Camera.cpp",
               "RelativeToolTip": "src\\Camera.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-21T12:30:44.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-21T12:30:44.106Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "Color.h",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Color.h",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Color.h",
               "RelativeDocumentMoniker": "src\\Color.h",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Color.h",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Color.h",
               "RelativeToolTip": "src\\Color.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-23T08:10:34.135Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-23T08:10:34.135Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
               "Title": "Material.cpp",
-              "DocumentMoniker": "U:\\hlocal\\ILM\\raytracer\\src\\Material.cpp",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Material.cpp",
               "RelativeDocumentMoniker": "src\\Material.cpp",
-              "ToolTip": "U:\\hlocal\\ILM\\raytracer\\src\\Material.cpp",
+              "ToolTip": "C:\\Users\\Usuario\\Music\\ILM\\raytracer\\src\\Material.cpp",
               "RelativeToolTip": "src\\Material.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
@@ -432,7 +431,9 @@
               "DocumentIndex": 24,
               "Title": "memory",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include\\memory",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include\\memory",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include\\memory",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\include\\memory",
               "ViewState": "AgIAAFYGAAAAAAAAAAAjwGIGAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-04-23T07:50:56.938Z"
