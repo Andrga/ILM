@@ -1,6 +1,5 @@
-﻿  Sphere.cpp
-C:\Users\andres\Documents\GitHub\ILM\raytracer\src\ShapeIntersection.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  (compiling source file '../src/Sphere.cpp')
+﻿  World.cpp
+C:\Users\Usuario\Music\ILM\raytracer\src\ShapeIntersection.h(3,10): warning C4067: símbolos (token) inesperados después de la directiva del preprocesador; se esperaba una nueva línea
+  (compilando archivo de origen "../src/World.cpp")
   
-C:\Users\andres\Documents\GitHub\ILM\raytracer\src\Sphere.cpp(25,11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  raytracer.vcxproj -> C:\Users\andres\Documents\GitHub\ILM\raytracer\x64\Debug\raytracer.exe
+  raytracer.vcxproj -> C:\Users\Usuario\Music\ILM\raytracer\x64\Debug\raytracer.exe

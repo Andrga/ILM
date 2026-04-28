@@ -31,17 +31,23 @@ Color Renderer::shade(Ray r, ShapeIntersection hit) const {
 	Color ret(BLACK);
 	// Ambiente
 	ret += Color(0.1, 0.1, 0.1); // Luz de ambiente , cableada
+
 	// luces
 	for (std::shared_ptr<Light> l : _world->getLightVector()) {
 		if (l->projectShadows()) {
 			Ray shadowRay(hit.getPoint(), l->shadowDir(hit.getPoint()));
 			ShapeIntersection si;
-			if (_world->getShapeScene()->Intersect(shadowRay, 0, 50, si))
-			{
+			if (_world->getShapeScene()->Intersect(shadowRay, 0, 50, si)){
 				continue;
 			}
 			ret += l->shade(r, hit);
 		}
+	}
+
+	// reflejo
+	if (hit.getMaterial()->getReflexFactor() > 0.0f) {
+		Ray secondaryRay(hit.getPoint(), glm::reflect(hit.getPoint(), hit.getNormal()));
+		ret += hit.getMaterial()->getReflexFactor() * ray_color(secondaryRay);
 	}
 
 	return ret;

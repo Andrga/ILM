@@ -1,4 +1,5 @@
 #include "Material.h"
 
-Material::Material(Color const& baseColor) : _baseColor(baseColor){
+Material::Material(Color const& baseColor, float reflexFactor) 
+	: _baseColor(baseColor), _reflexFactor(reflexFactor) {
 }

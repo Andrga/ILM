@@ -1,7 +1,6 @@
 #include "Sphere.h"
 
 Sphere::Sphere(glm::vec3 center, float radius, std::shared_ptr<Material> mat) : Shape(mat), _center(center), _radius(radius) {
-
 }
 
 bool Sphere::Intersect(const Ray& ray, float tMin, float tMax) const {
