@@ -10,22 +10,23 @@
 #include "Renderer.h"
 #include "Scene.h"
 #include "Sphere.h"
+#include "Quad.h"
 #include "DirectionalLight.h"
 #include "PointLight.h"
 
 int main(void) {
 	std::ofstream outFile("imagen.ppm");
-	Film film(800, 600, outFile);
+	Film film(1920, 1080, outFile);
 
-	Camera camera( film,
+	Camera camera(film,
 		glm::vec3(0, 0, 3),
 		glm::vec3(0, 0, 0),
 		glm::vec3(0, 1, 0),
 		60
 	);
-	std::shared_ptr<Material> azul = std::make_shared<Material>(BLUE);
-	std::shared_ptr<Material> amarillo = std::make_shared<Material>(YELLOW);
-	std::shared_ptr<Material> rojo = std::make_shared<Material>(RED);
+	std::shared_ptr<Material> azul = std::make_shared<Material>(BLUE, 0.5f);
+	std::shared_ptr<Material> amarillo = std::make_shared<Material>(YELLOW, 0.5f);
+	std::shared_ptr<Material> rojo = std::make_shared<Material>(RED, 0.5f);
 	std::shared_ptr<Material> verde = std::make_shared<Material>(GREEN, 0.5f);
 
 	std::shared_ptr<Sphere> obj3 =
@@ -34,8 +35,10 @@ int main(void) {
 		std::make_shared<Sphere>(glm::vec3(0, 0, -2), 1.0, amarillo);
 	std::shared_ptr<Sphere> obj1 =
 		std::make_shared<Sphere>(glm::vec3(2, 0, -2), 1.0, azul);
-	std::shared_ptr<Sphere> suelo =
-		std::make_shared<Sphere>(glm::vec3(0, -100, -2), 99.0, verde);
+	/*std::shared_ptr<Sphere> suelo =
+		std::make_shared<Sphere>(glm::vec3(2,1 , -2), 1.0, verde);*/
+	std::shared_ptr<Quad> suelo =
+		std::make_shared<Quad>(glm::vec3(3, -1, 5), glm::vec3(-6, 0, 0), glm::vec3(0, 0, 6), verde);
 
 	Scene scene;
 	scene.addShape(obj1); scene.addShape(obj2); scene.addShape(obj3); scene.addShape(suelo);

@@ -14,24 +14,20 @@ void Renderer::Render() {
 	}
 }
 
-Color Renderer::ray_color(const Ray& r) const {
+Color Renderer::ray_color(const Ray& r, int i) const {
 	ShapeIntersection intersection;
 	if (_world->getShapeScene()->Intersect(r, 0, 50, intersection)) {
-		return shade(r, intersection);
+		return shade(r, intersection, i);
 	}
 
 	return BLACK;
-
-	/*glm::vec3 unit_direction = glm::normalize(r.direction());
-	float a = 0.5 * (unit_direction.y + 1.0);
-	return (1.0f - a) * Color(1.0, 1.0, 1.0) + a * Color(0.5, 0.7, 1.0);*/
 }
 
-Color Renderer::shade(Ray r, ShapeIntersection hit) const {
+Color Renderer::shade(Ray r, ShapeIntersection hit, int i) const {
 	Color ret(BLACK);
 	// Ambiente
 	ret += Color(0.1, 0.1, 0.1); // Luz de ambiente , cableada
-
+	
 	// luces
 	for (std::shared_ptr<Light> l : _world->getLightVector()) {
 		if (l->projectShadows()) {
@@ -45,9 +41,9 @@ Color Renderer::shade(Ray r, ShapeIntersection hit) const {
 	}
 
 	// reflejo
-	if (hit.getMaterial()->getReflexFactor() > 0.0f) {
-		Ray secondaryRay(hit.getPoint(), glm::reflect(hit.getPoint(), hit.getNormal()));
-		ret += hit.getMaterial()->getReflexFactor() * ray_color(secondaryRay);
+	if (i < _reflexDeepness && hit.getMaterial() && hit.getMaterial()->getReflexFactor() > 0.0f) {
+		Ray secondaryRay(hit.getPoint(), glm::reflect(glm::normalize(r.direction()), hit.getNormal()));
+		ret += hit.getMaterial()->getReflexFactor() * ray_color(secondaryRay, i++);
 	}
 
 	return ret;

@@ -15,7 +15,7 @@ bool Sphere::Intersect(const Ray& ray, float tMin, float tMax) const {
 bool Sphere::Intersect(const Ray& ray, float tMin, float tMax, ShapeIntersection& shapeIntersection) const
 {
 	glm::vec3 oc = _center - ray.origin();
-	auto a = glm::dot(ray.direction(), ray.direction());
+	auto a = glm::dot(glm::normalize(ray.direction()), glm::normalize(ray.direction()));
 	auto b = -2.0 * glm::dot(ray.direction(), oc);
 	auto c = glm::dot(oc, oc) - _radius * _radius;
 	auto discriminant = b * b - 4 * a * c;
