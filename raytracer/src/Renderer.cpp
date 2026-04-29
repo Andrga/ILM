@@ -16,7 +16,7 @@ void Renderer::Render() {
 
 Color Renderer::ray_color(const Ray& r, int i) const {
 	ShapeIntersection intersection;
-	if (_world->getShapeScene()->Intersect(r, 0, 50, intersection)) {
+	if (_world->getShapeScene()->Intersect(r, 0.001f, 50, intersection)) {
 		return shade(r, intersection, i);
 	}
 
@@ -33,7 +33,7 @@ Color Renderer::shade(Ray r, ShapeIntersection hit, int i) const {
 		if (l->projectShadows()) {
 			Ray shadowRay(hit.getPoint(), l->shadowDir(hit.getPoint()));
 			ShapeIntersection si;
-			if (_world->getShapeScene()->Intersect(shadowRay, 0, 50, si)){
+			if (_world->getShapeScene()->Intersect(shadowRay, 0.001f, 50, si)){
 				continue;
 			}
 			ret += l->shade(r, hit);
@@ -41,9 +41,16 @@ Color Renderer::shade(Ray r, ShapeIntersection hit, int i) const {
 	}
 
 	// reflejo
-	if (i < _reflexDeepness && hit.getMaterial() && hit.getMaterial()->getReflexFactor() > 0.0f) {
+	/*if (i < _reflexDeepness && hit.getMaterial() && hit.getMaterial()->getReflexFactor() > 0.0f) {
 		Ray secondaryRay(hit.getPoint(), glm::reflect(glm::normalize(r.direction()), hit.getNormal()));
 		ret += hit.getMaterial()->getReflexFactor() * ray_color(secondaryRay, i++);
+	}*/
+	if (i < _reflexDeepness && hit.getMaterial()->getReflexFactor() > 0.0f) {
+		glm::vec3 reflectedDir = glm::reflect(r.direction(), hit.getNormal());
+		glm::vec3 offsetOrigin = hit.getPoint() + hit.getNormal() * 0.001f;
+
+		Ray secondaryRay(offsetOrigin, glm::normalize(reflectedDir));
+		ret += hit.getMaterial()->getReflexFactor() * ray_color(secondaryRay, i + 1);
 	}
 
 	return ret;

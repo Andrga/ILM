@@ -30,7 +30,7 @@ bool Quad::Intersect(const Ray& ray, float tMin, float tMax) const
 
 bool Quad::Intersect(const Ray& ray, float tMin, float tMax, ShapeIntersection& shapeIntersection) const
 {
-	float denom = glm::dot(_normal, ray.direction());
+	float denom = glm::dot(_normal, glm::normalize(ray.direction()));
 
 	// No intersecciona si es paralelo al plano
 	if (std::fabs(denom) < 1e-8)
@@ -41,17 +41,17 @@ bool Quad::Intersect(const Ray& ray, float tMin, float tMax, ShapeIntersection& 
 	if (t<tMin || t>tMax)
 		return false;
 
-	glm::vec3 p = ray.origin() + t * glm::normalize(ray.direction());
+	glm::vec3 p = ray.at(t);
+	glm::vec3 pq = p - _Q;
 
-	glm::vec3 planar_hitpt_vector = p - _Q;
-	float alpha = dot(_w, cross(planar_hitpt_vector, _v));
-	float beta = dot(_w, cross(_u, planar_hitpt_vector));
+	float a = glm::dot(_w, glm::cross(_v, pq));
+	float b = glm::dot(_w, glm::cross(pq, _u));
 
+	if (a < 0.0f || a > 1.0f || b < 0.0f || b > 1.0f)
+		return false;
 
 	// Construye la interseccion
 	shapeIntersection = ShapeIntersection(_material, p, _normal);
-	if (!isInterior(alpha, beta))
-		return false;
 	return true;
 }
 
