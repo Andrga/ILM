@@ -10,7 +10,7 @@ public:
 		_color(color), _glossPower(glossPower), _projectShadows(projectShadows)
 	{}
 
-	virtual Color shade(Ray r, ShapeIntersection hit) = 0;
+	virtual Color shade(Ray r, const ShapeIntersection&) = 0;
 
 	bool projectShadows() {
 		return _projectShadows;

@@ -5,5 +5,6 @@ Material::Material(Color const& baseColor, float reflexFactor)
 }
 
 Material::Material(Texture* tex, float reflexFactor) 
-	: _texture(tex), _baseColor(_texture->color(0,0)), _reflexFactor(reflexFactor) {
+	: _texture(tex), _baseColor(WHITE), _reflexFactor(reflexFactor) 
+{
 }

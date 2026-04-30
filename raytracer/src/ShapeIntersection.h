@@ -11,7 +11,6 @@ public:
 	glm::vec3 getPoint() const { return _point; }
 	glm::vec3 getNormal() const { return _normal; }
 	glm::vec3 getUVS() const { return glm::vec3(_u, _v, 0); }
-private:
 	std::shared_ptr<Material> _material;
 	glm::vec3 _point;
 	glm::vec3 _normal;

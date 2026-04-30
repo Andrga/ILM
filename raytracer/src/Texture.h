@@ -3,7 +3,6 @@
 
 class Texture {
 public:
-	Texture() {}
-	virtual Color color(float u, float v) const { return WHITE; }
+	virtual Color color(float u, float v) const = 0;
 };
 

@@ -6,7 +6,7 @@
 DirectionalLight::DirectionalLight(const glm::vec3& dir, const Color& color, float glossPower, bool projectShadows)
 	: Light(color, glossPower, projectShadows), _direction(glm::normalize(dir)) {
 }
-Color DirectionalLight::shade(Ray r, ShapeIntersection hit) {
+Color DirectionalLight::shade(Ray r, const ShapeIntersection& hit) {
 	// Diffuse
 	float intensity = std::max(0.0f, glm::dot(hit.getNormal(), _direction));
 	glm::vec3 diffuse = _color * intensity;

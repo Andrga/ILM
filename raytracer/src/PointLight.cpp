@@ -7,7 +7,7 @@ PointLight::PointLight(const glm::vec3& point, const Color& color, float glossPo
 	Light(color, glossPower, projectShadows), _point(point)
 {}
 
-Color PointLight::shade(Ray r, ShapeIntersection hit)
+Color PointLight::shade(Ray r, const ShapeIntersection& hit)
 {
 	// Diffuse
 	glm::vec3 direction = glm::normalize( _point - hit.getPoint());

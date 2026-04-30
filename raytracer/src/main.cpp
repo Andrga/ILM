@@ -14,10 +14,11 @@
 #include "DirectionalLight.h"
 #include "PointLight.h"
 #include "TextureGridColor.h"
+#include "TextureConstColor.h"
 
 int main(void) {
 	std::ofstream outFile("imagen.ppm");
-	Film film(1920, 1080, outFile);
+	Film film(800, 600, outFile);
 
 	Camera camera(film,
 		glm::vec3(0, 0, 3),
@@ -27,8 +28,8 @@ int main(void) {
 	);
 	std::shared_ptr<Material> azul = std::make_shared<Material>(BLUE, 0.5f);
 	std::shared_ptr<Material> amarillo = std::make_shared<Material>(YELLOW, 0.5f);
-	std::shared_ptr<Material> rojo = std::make_shared<Material>(RED, 0.5f);
-	TextureGridColor* floorTex = new TextureGridColor(GREEN, WHITE, 4, 4);
+	std::shared_ptr<Material> rojo = std::make_shared<Material>(new TextureConstColor(RED), 0.5f);
+	TextureGridColor* floorTex = new TextureGridColor( std::make_shared<TextureConstColor>(GREEN), std::make_shared<TextureConstColor>(WHITE), 4, 4);
 	std::shared_ptr<Material> verde = std::make_shared<Material>(floorTex, 0.5f);
 
 	std::shared_ptr<Sphere> obj3 =
@@ -40,7 +41,7 @@ int main(void) {
 	/*std::shared_ptr<Sphere> suelo =
 		std::make_shared<Sphere>(glm::vec3(2,1 , -2), 1.0, verde);*/
 	std::shared_ptr<Quad> suelo =
-		std::make_shared<Quad>(glm::vec3(3, -1, 5), glm::vec3(-6, 0, 0), glm::vec3(0, 0, 6), verde);
+		std::make_shared<Quad>(glm::vec3(3, -1, -5), glm::vec3(-6, 0, 0), glm::vec3(0, 0, 6), verde);
 
 	Scene scene;
 	scene.addShape(obj1); scene.addShape(obj2); scene.addShape(obj3); scene.addShape(suelo);

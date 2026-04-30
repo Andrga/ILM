@@ -8,8 +8,7 @@ Quad::Quad(glm::vec3 Q, glm::vec3 u, glm::vec3 v, std::shared_ptr<Material> mat)
 	glm::vec3 n = cross(u, v);
 	_normal = glm::normalize(n);
 	_D = dot(_normal, _Q);
-	_w = n / glm::dot(glm::normalize(_u), glm::normalize(_v));
-	//_w = n / glm::dot(n, n);
+	_w = n / glm::dot(n, n);
 }
 
 void Quad::getUVS(const glm::vec3& p, float& u, float& v) const { 
@@ -44,16 +43,22 @@ bool Quad::Intersect(const Ray& ray, float tMin, float tMax, ShapeIntersection& 
 	if (t<tMin || t>tMax)
 		return false;
 
-	glm::vec3 p = ray.origin() + t * ray.direction();
-	glm::vec3 pq = p - _Q;
+	auto intersection = ray.at(t);
+	glm::vec3 planar_hitpt_vector = intersection - _Q;
 
-	float a = glm::dot(_w, glm::cross(_v, pq));
-	float b = glm::dot(_w, glm::cross(pq, _u));
+	auto a = glm::dot(_w, cross(planar_hitpt_vector, _v));
+	auto b = glm::dot(_w, cross(_u, planar_hitpt_vector));
+
 
 	if (a < 0.0f || a > 1.0f || b < 0.0f || b > 1.0f)
 		return false;
 
 	// Construye la interseccion
-	shapeIntersection = ShapeIntersection(_material, p, _normal, a, b);
+	shapeIntersection._material = _material;
+	shapeIntersection._point = intersection;
+	shapeIntersection._normal = _normal;
+	shapeIntersection._u = a;
+	shapeIntersection._v = b;
+
 	return true;
 }
