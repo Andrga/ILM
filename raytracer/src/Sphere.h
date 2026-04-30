@@ -5,6 +5,7 @@
 
 #include "glm/geometric.hpp"
 #include "glm/trigonometric.hpp"
+
 class Sphere : public Shape {
 public:
 	Sphere(glm::vec3 center, float radius, std::shared_ptr<Material> mat);

@@ -29,7 +29,12 @@ int main(void) {
 	std::shared_ptr<Material> azul = std::make_shared<Material>(BLUE, 0.5f);
 	std::shared_ptr<Material> amarillo = std::make_shared<Material>(YELLOW, 0.5f);
 	std::shared_ptr<Material> rojo = std::make_shared<Material>(new TextureConstColor(RED), 0.5f);
-	TextureGridColor* floorTex = new TextureGridColor( std::make_shared<TextureConstColor>(GREEN), std::make_shared<TextureConstColor>(WHITE), 4, 4);
+	std::shared_ptr<TextureGridColor> gridTex =
+		std::make_shared<TextureGridColor>(std::make_shared<TextureConstColor>(GREEN), std::make_shared<TextureConstColor>(WHITE), 4, 4);
+	TextureGridColor* floorTex =
+		new TextureGridColor(gridTex, std::make_shared<TextureConstColor>(WHITE), 4, 4);
+	//TextureGridColor* floorTex =
+	//	new TextureGridColor(std::make_shared<TextureConstColor>(GREEN), std::make_shared<TextureConstColor>(WHITE), 4, 4);
 	std::shared_ptr<Material> verde = std::make_shared<Material>(floorTex, 0.5f);
 
 	std::shared_ptr<Sphere> obj3 =

@@ -17,14 +17,13 @@ TextureGridColor::TextureGridColor(std::shared_ptr<Texture> tex1, std::shared_pt
 	: _tex1(tex1), _tex2(tex2), _width(tilesWidth), _height(tilesHeight) {}
 
 Color TextureGridColor::color(float u, float v) const {
-	int xInteger = int(std::floor(u * _width));
-	int yInteger = int(std::floor(v * _height));
-
+	float uc = u * _width;
+	float vf = v * _height;
+	int xInteger = std::floor(uc);
+	int yInteger = std::floor(vf);
+	float localU = uc - xInteger;
+	float localv = vf - yInteger;
 	bool isEven = (xInteger + yInteger) % 2 == 0;
 
-	if (isEven)
-		return _tex1->color(u, v);
-	
-	return _tex2->color(u, v);
-	//return isEven ? _tex1->color(u, v) : _tex2->color(u, v);
+	return isEven ? _tex1->color(localU, localv) : _tex2->color(localU, localv);
 }

@@ -7,18 +7,19 @@ Camera::Camera(
     glm::vec3 position,
     glm::vec3 look,
     glm::vec3 up,
-    const float fov_degrees_vertical
-) : position(position) {
+    const float fov_degrees_vertical,
+    float ba
+) : position(position), blurAngle(ba) {
     const float fov_radians_vertical = glm::radians(fov_degrees_vertical * 0.5);
     const float half_height_normalized = std::tan(fov_radians_vertical);
 
     const glm::vec3 forward_displacement = position - look;
-    const float focal_length = glm::length(forward_displacement);
-    const glm::vec3 forward = forward_displacement / focal_length;
+    focalLength = glm::length(forward_displacement);
+    const glm::vec3 forward = forward_displacement / focalLength;
     const glm::vec3 right = glm::cross(up, forward);    
     const glm::vec3 v = glm::cross(forward, right);
 
-    const float half_height_viewport = focal_length * half_height_normalized;
+    const float half_height_viewport = focalLength * half_height_normalized;
     const float half_width_viewport = half_height_viewport * film.GetAspectRatio();
 
     const float height_viewport = half_height_viewport * 2.0;
@@ -30,9 +31,11 @@ Camera::Camera(
     delta_x = right * pixel_width;
     delta_y = -v * pixel_height;
     position_top_left =
-        position - focal_length * forward
+        position - focalLength * forward
         + v * half_height_viewport + delta_x * 0.5f
         - right * half_width_viewport + delta_y * 0.5f;
+
+    blurRadius = focalLength * glm::tan(glm::radians(blurAngle) / 2);
 }
 
 Ray Camera::get_ray(int x, int y) const {
@@ -40,5 +43,6 @@ Ray Camera::get_ray(int x, int y) const {
         position_top_left + delta_x * (float)x + delta_y * (float)y;
     const glm::vec3 displacement = (sample - position);
 
+    //auto p = std::randomci
     return Ray{position, glm::normalize(displacement)};
 }
