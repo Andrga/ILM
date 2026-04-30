@@ -41,16 +41,9 @@ Color Renderer::shade(Ray r, ShapeIntersection hit, int i) const {
 	}
 
 	// reflejo
-	/*if (i < _reflexDeepness && hit.getMaterial() && hit.getMaterial()->getReflexFactor() > 0.0f) {
+	if (i < _reflexDeepness && hit.getMaterial() && hit.getMaterial()->getReflexFactor() > 0.0f) {
 		Ray secondaryRay(hit.getPoint(), glm::reflect(glm::normalize(r.direction()), hit.getNormal()));
 		ret += hit.getMaterial()->getReflexFactor() * ray_color(secondaryRay, i++);
-	}*/
-	if (i < _reflexDeepness && hit.getMaterial()->getReflexFactor() > 0.0f) {
-		glm::vec3 reflectedDir = glm::reflect(r.direction(), hit.getNormal());
-		glm::vec3 offsetOrigin = hit.getPoint() + hit.getNormal() * 0.001f;
-
-		Ray secondaryRay(offsetOrigin, glm::normalize(reflectedDir));
-		ret += hit.getMaterial()->getReflexFactor() * ray_color(secondaryRay, i + 1);
 	}
 
 	return ret;

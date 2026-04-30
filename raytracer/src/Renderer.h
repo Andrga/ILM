@@ -26,6 +26,6 @@ private:
 	Film* _film;
 	Camera* _camera;
 	World* _world;
-	int _reflexDeepness = 0;
+	int _reflexDeepness = 10;
 };
 

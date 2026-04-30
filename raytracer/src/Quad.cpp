@@ -8,8 +8,8 @@ Quad::Quad(glm::vec3 Q, glm::vec3 u, glm::vec3 v, std::shared_ptr<Material> mat)
 	glm::vec3 n = cross(u, v);
 	_normal = glm::normalize(n);
 	_D = dot(_normal, _Q);
-	//_w = n / glm::dot(glm::normalize(_u), glm::normalize(_v));
-	_w = n / glm::dot(n, n);
+	_w = n / glm::dot(glm::normalize(_u), glm::normalize(_v));
+	//_w = n / glm::dot(n, n);
 }
 
 bool Quad::Intersect(const Ray& ray, float tMin, float tMax) const
