@@ -22,6 +22,7 @@
     <ClCompile Include="..\src\Camera.cpp" />
     <ClCompile Include="..\src\DirectionalLight.cpp" />
     <ClCompile Include="..\src\Film.cpp" />
+    <ClCompile Include="..\src\Light.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\Material.cpp" />
     <ClCompile Include="..\src\PointLight.cpp" />
@@ -30,6 +31,9 @@
     <ClCompile Include="..\src\Scene.cpp" />
     <ClCompile Include="..\src\ShapeIntersection.cpp" />
     <ClCompile Include="..\src\Sphere.cpp" />
+    <ClCompile Include="..\src\Texture.cpp" />
+    <ClCompile Include="..\src\TextureConstColor.cpp" />
+    <ClCompile Include="..\src\TextureGridColor.cpp" />
     <ClCompile Include="..\src\World.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -47,6 +51,9 @@
     <ClInclude Include="..\src\Shape.h" />
     <ClInclude Include="..\src\ShapeIntersection.h" />
     <ClInclude Include="..\src\Sphere.h" />
+    <ClInclude Include="..\src\Texture.h" />
+    <ClInclude Include="..\src\TextureConstColor.h" />
+    <ClInclude Include="..\src\TextureGridColor.h" />
     <ClInclude Include="..\src\World.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

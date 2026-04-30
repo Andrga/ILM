@@ -13,6 +13,7 @@
 #include "Quad.h"
 #include "DirectionalLight.h"
 #include "PointLight.h"
+#include "TextureGridColor.h"
 
 int main(void) {
 	std::ofstream outFile("imagen.ppm");
@@ -27,7 +28,8 @@ int main(void) {
 	std::shared_ptr<Material> azul = std::make_shared<Material>(BLUE, 0.5f);
 	std::shared_ptr<Material> amarillo = std::make_shared<Material>(YELLOW, 0.5f);
 	std::shared_ptr<Material> rojo = std::make_shared<Material>(RED, 0.5f);
-	std::shared_ptr<Material> verde = std::make_shared<Material>(GREEN, 0.5f);
+	TextureGridColor* floorTex = new TextureGridColor(GREEN, WHITE, 4, 4);
+	std::shared_ptr<Material> verde = std::make_shared<Material>(floorTex, 0.5f);
 
 	std::shared_ptr<Sphere> obj3 =
 		std::make_shared<Sphere>(glm::vec3(-2, 0, -2), 1.0, rojo);

@@ -1,6 +1,20 @@
+#define _USE_MATH_DEFINES
 #include "Sphere.h"
+#include <cmath>
 
 Sphere::Sphere(glm::vec3 center, float radius, std::shared_ptr<Material> mat) : Shape(mat), _center(center), _radius(radius) {
+}
+
+void Sphere::getUVS(const glm::vec3& p, float& u, float& v) const {
+	// p: a given point on the sphere of radius one, centered at the origin.
+	// u: returned value [0,1] of angle around the Y axis from X=-1.
+	// v: returned value [0,1] of angle from Y=-1 to Y=+1.
+
+	auto theta = std::acos(-p.y);
+	auto phi = std::atan2(-p.z, p.x) + M_PI;
+
+	u = phi / (2 * M_PI);
+	v = theta / M_PI;
 }
 
 bool Sphere::Intersect(const Ray& ray, float tMin, float tMax) const {
@@ -24,7 +38,9 @@ bool Sphere::Intersect(const Ray& ray, float tMin, float tMax, ShapeIntersection
 		float t = (-b - std::sqrt(discriminant)) / (2.0 * a);
 		if (t > tMin && t < tMax) {
 			glm::vec3 p = ray.origin() + t * ray.direction();
-			shapeIntersection = ShapeIntersection(_material, p, glm::normalize(p - _center));
+			float u; float v;
+			getUVS(p, u, v);
+			shapeIntersection = ShapeIntersection(_material, p, glm::normalize(p - _center), u, v);
 			return true;
 		}
 	}

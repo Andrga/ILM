@@ -9,6 +9,8 @@ class Sphere : public Shape {
 public:
 	Sphere(glm::vec3 center, float radius, std::shared_ptr<Material> mat);
 
+	void getUVS(const glm::vec3& p, float& u, float& v) const override;
+
 	glm::vec3 getCenter() const { return _center; }
 	float getRadius() const { return _radius; }
 

@@ -19,7 +19,7 @@ Color DirectionalLight::shade(Ray r, ShapeIntersection hit) {
 	specularIntensity = std::pow(specularIntensity, _glossPower);
 	glm::vec3 specular = _color * specularIntensity;
 
-	return Color(hit.getMaterial()->getBaseColor() * diffuse + specular);
+	return Color(hit.getMaterial()->getBaseColor(hit.getUVS().x, hit.getUVS().y) * diffuse + specular);
 }
 
 glm::vec3 DirectionalLight::shadowDir(glm::vec3 point)
