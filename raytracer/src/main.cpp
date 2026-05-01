@@ -25,7 +25,7 @@ int main(void) {
 		glm::vec3(0, 0, 0),
 		glm::vec3(0, 1, 0),
 		60,
-		0.5 
+		1
 	);
 	std::shared_ptr<Material> azul = std::make_shared<Material>(BLUE, 0.5f);
 	std::shared_ptr<Material> amarillo = std::make_shared<Material>(YELLOW, 0.5f);
@@ -59,6 +59,6 @@ int main(void) {
 	//world.addLight(pintLight2);
 
 	Renderer renderer(&film, &camera, &world);
-	renderer.Render(1);
+	renderer.Render(100);
 	return 0;
 }
