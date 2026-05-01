@@ -10,8 +10,9 @@ class Renderer {
 public:
 	Renderer(Film* film, Camera* camera, World* world);
 
+
 	// que genera la escena
-	void Render();
+	void Render(float numSamples);
 
 	// que devuelve el color del rayo lanzado sobre la geometria.
 	Color ray_color(const Ray& r, int i = 0)const;

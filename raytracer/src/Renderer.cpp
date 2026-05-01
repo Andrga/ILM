@@ -4,12 +4,15 @@ Renderer::Renderer(Film* film, Camera* camera, World* world)
 	: _film(film), _camera(camera), _world(world) {
 }
 
-void Renderer::Render() {
+void Renderer::Render(float numSamples) {
 	for (std::size_t y = 0; y < _film->GetTamY(); ++y) {
 		for (std::size_t x = 0; x < _film->GetTamX(); ++x) {
-			const Ray ray_primary = _camera->get_ray(x, y);
-			const Color c = ray_color(ray_primary);
-			_film->AddPixel(c);
+			Color pixelColor = BLACK;
+			for (std::size_t z = 0; z < numSamples; ++z) {
+				const Ray ray_primary = _camera->get_ray(x, y);
+				pixelColor += ray_color(ray_primary);
+			}
+			_film->AddPixel(pixelColor/numSamples);
 		}
 	}
 }
