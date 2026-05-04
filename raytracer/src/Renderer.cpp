@@ -28,8 +28,8 @@ Color Renderer::ray_color(const Ray& r, int i) const {
 
 Color Renderer::shade(Ray r, ShapeIntersection hit, int i) const {
 	Color ret(BLACK);
-	// Ambiente
-	ret += Color(0.1, 0.1, 0.1); // Luz de ambiente , cableada
+	// Ambiente - Mas bonito en negro puro :-]
+	//ret += Color(0.1, 0.1, 0.1); // Luz de ambiente , cableada
 	
 	// luces
 	for (std::shared_ptr<Light> l : _world->getLightVector()) {
